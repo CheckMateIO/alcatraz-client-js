@@ -1,4 +1,4 @@
-module.exports = (function() {
+(function(window) {
   function Alcatraz() {}
 
   Alcatraz.root_url = null;
@@ -59,6 +59,8 @@ module.exports = (function() {
     });
   };
 
+  window.Alcatraz = Alcatraz;
+
   return Alcatraz;
 
-})();
+})(window);
