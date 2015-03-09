@@ -1,11 +1,11 @@
 (function(window) {
   function Alcatraz() {}
 
-  Alcatraz.root_url = null;
+  Alcatraz.rootUrl = null;
 
   Alcatraz.storeCard = function(data, callback) {
     return $.ajax({
-      url: this.root_url + "/cards",
+      url: this.rootUrl + "/cards",
       dataType: "jsonp",
       data: $.extend({}, data, {
         _method: 'post'
@@ -16,7 +16,7 @@
 
   Alcatraz.getCard = function(key, passcode, id, callback) {
     return $.jsonp({
-      url: this.root_url + "/cards/" + id,
+      url: this.rootUrl + "/cards/" + id,
       callback: 'callback',
       dataType: "json",
       callbackParameter: "callback",
@@ -33,7 +33,7 @@
 
   Alcatraz.storeData = function(data, callback) {
     return $.ajax({
-      url: this.root_url + "/secure_data",
+      url: this.rootUrl + "/secure_data",
       dataType: "jsonp",
       data: $.extend({}, data, {
         _method: 'post'
@@ -44,7 +44,7 @@
 
   Alcatraz.getData = function(key, passcode, id, callback) {
     return $.jsonp({
-      url: this.root_url + "/secure_data/" + id,
+      url: this.rootUrl + "/secure_data/" + id,
       callback: 'callback',
       dataType: "json",
       callbackParameter: "callback",
