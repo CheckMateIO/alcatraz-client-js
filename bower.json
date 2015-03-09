@@ -1,0 +1,25 @@
+{
+  "name": "alcatraz-client-js",
+  "version": "0.0.1",
+  "authors": [
+    "Matt Nguyen <matt@checkmate.io>"
+  ],
+  "homepage": "https://github.com/CheckMateIO/alcatraz-client-js",
+  "description": "Javascript client that communicates with Checkmate's Alcatraz PCI-compliant data store",
+  "main": "index.js",
+  "keywords": [
+    "alcatraz",
+    "checkmate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
