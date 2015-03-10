@@ -1,5 +1,17 @@
-(function(window) {
-  function Alcatraz() {}
+(function(global, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(function() {
+      return factory();
+    });
+  } else if (typeof module !== 'undefined' && module.exports) {
+    module.exports = factory();
+  } else {
+    global.Alcatraz = factory();
+  }
+}(typeof window !== 'undefined' ? window : this, function() {
+  'use strict';
+
+  var Alcatraz = {};
 
   Alcatraz.rootUrl = null;
 
@@ -59,8 +71,5 @@
     });
   };
 
-  window.Alcatraz = Alcatraz;
-
   return Alcatraz;
-
-})(window);
+}));
